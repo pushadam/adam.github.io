@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Dobby </title>
+    <title>ለማጊሻ </title>
     <style>
         body {
             display: flex;
@@ -103,13 +103,11 @@
 
 <body id="valentine-theme">
     <div id="container">
-        <p id="question">ስሚማ, Michael Fassbender says you are </p>
+        <p id="question">ስሚማ, in the words of Idris Elba</p>
         <iframe src="https://giphy.com/embed/26gsr6U0uEzmf0nny" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/omaze-love-valentine-26gsr6U0uEzmf0nny"></a></p>
         <button id="yesButton" onclick="showSecondContainer()">Yes</button>
         <button id="no" ontouchmove="moveNo(event)" onmousemove="moveNo(event)" onclick="hideNo()">No</button>
     </div>
-
-    
 
     <div id="second-container">
         <iframe id="giphy-embed" src="https://giphy.com/embed/xT9IgKWQeoclWggTDO" frameBorder="0" class="giphy-embed"
@@ -156,7 +154,7 @@
 
             function animate() {
                 fontSize += 2;
-                yesElement.style.fontSize = ${fontSize}px;
+                yesElement.style.fontSize = `${fontSize}px`;
 
                 if (fontSize < 60) {
                     requestAnimationFrame(animate);
@@ -214,12 +212,12 @@
                 const yesButtonRect = yesButton.getBoundingClientRect();
                 if (newX > yesButtonRect.left && newX < yesButtonRect.right && newY > yesButtonRect.top && newY < yesButtonRect.bottom) {
                     // If the new position overlaps with the Yes button, move the No button to a different position
-                    noButton.style.left = ${Math.random() * window.innerWidth}px;
-                    noButton.style.top = ${Math.random() * window.innerHeight}px;
+                    noButton.style.left = `${Math.random() * window.innerWidth}px`;
+                    noButton.style.top = `${Math.random() * window.innerHeight}px`;
                 } else {
                     // Move the button to the new position
-                    noButton.style.left = ${newX}px;
-                    noButton.style.top = ${newY}px;
+                    noButton.style.left = `${newX}px`;
+                    noButton.style.top = `${newY}px`;
                 }
 
                 // Change the text of the button to the next phrase
